@@ -5,11 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 2014;
 
 // Servir arquivos estáticos (CSS, imagens, vídeos, etc.)
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "frontend")));
 
 // Rota principal para servir o arquivo HTML
 app.get("/", (req, res) => {
-   res.sendFile(path.join(__dirname, "frontend", "index.html"));
+   res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Iniciar o servidor
